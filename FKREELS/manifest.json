@@ -1,0 +1,21 @@
+{
+  "name": "FK Reels",
+  "description": "Removing Facebook reels (for reals), and Youtube shorts",
+  "version": "1.0",
+  "manifest_version": 3,
+   "icons": {
+    "128": "reel.png"
+  },
+  "action": {
+    "default_popup": "rmreels.html",
+    "default_icon": "reel.png"
+  },
+      "content_scripts": [{
+        "matches": ["https://www.facebook.com/*"],
+        "js": ["rmreels.js"]
+    },
+	{
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["rmshorts.js"]
+    }]
+}
